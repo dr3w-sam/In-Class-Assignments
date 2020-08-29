@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">HW-3_ASamuel</string>
+    <string name="grade_prompt">Please enter your test scores</string>
+    <string name="t_1">Test 1:</string>
+    <string name="t_2">Test 2:</string>
+    <string name="grad">Graduate</string>
+    <string name="u_grad">Undergraduate</string>
+    <string name="stu_type">Please select your student type:</string>
+    <string name="calc">Calculate Grade</string>
+    <string name="home">Return Home</string>
+    <string name="grade_display">Your final grade is:</string>
+    <string name="string_hint">Enter Grade</string>
+    <string name="done_string">DONE</string>
+    <string name="final_grade_hint">Final Grade</string>
+    <string name="Title">Grade Calculator</string>
+</resources>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="409dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="18dp"
+        android:background="@android:color/holo_red_dark"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/prompt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:subtitle="@string/Title"
+        app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Large"
+        app:subtitleTextColor="#130101" />
+
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="286dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/grade_prompt"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/T_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/test1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/t_1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/test2"
+        app:layout_constraintEnd_toStartOf="@+id/T_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prompt" />
+
+    <TextView
+        android:id="@+id/test2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="72dp"
+        android:text="@string/t_2"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/prompt2"
+        app:layout_constraintEnd_toStartOf="@+id/T_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/test1" />
+
+    <EditText
+        android:id="@+id/T_1"
+        android:layout_width="175dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="9dp"
+        android:ems="10"
+        android:hint="@string/string_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/T_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/test1"
+        app:layout_constraintTop_toBottomOf="@+id/prompt" />
+
+    <EditText
+        android:id="@+id/T_2"
+        android:layout_width="177dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:hint="@string/string_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/prompt2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/test2"
+        app:layout_constraintTop_toBottomOf="@+id/T_1" />
+
+    <TextView
+        android:id="@+id/prompt2"
+        android:layout_width="252dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/stu_type"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/T_2"
+        tools:text="@string/stu_type" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="187dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="43dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_calc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prompt2">
+
+        <RadioButton
+            android:id="@+id/op1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/u_grad" />
+
+        <RadioButton
+            android:id="@+id/op2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/grad" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_calc"
+        android:layout_width="151dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="221dp"
+        android:text="@string/calc"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
